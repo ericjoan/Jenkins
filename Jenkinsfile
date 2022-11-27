@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         steps {
-                withSonarQubeEnv('SonarTiss'){
+                withSonarQubeEnv('SonarQubePruebas'){
                     // If you are using Windows then you should use "bat" step
                     // Since unit testing is out of the scope we skip them
                     sh "mvn -B clean deploy sonar:sonar"
