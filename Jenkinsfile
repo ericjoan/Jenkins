@@ -19,7 +19,7 @@ pipeline {
         
     }
     post{
-            sucess{
+            success{
                 bat "chrome /incognito http://localhost:8080/job/Tareas%203%20de%20diciembre/job/DesplegarProduccion/build?token=963852"
                 bat "echo Tarea Iniciada correctamente"
             }
