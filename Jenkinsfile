@@ -16,5 +16,13 @@ pipeline {
                 }
             }
         }
+        post{
+            failure{
+                bat "chrome /incognito url"
+                timeout(time: 5, unit: 'SECONDS'){
+                    bat "taskkill /F /IM Chrome.exe"
+                }
+            }
+        }
     }
 }
