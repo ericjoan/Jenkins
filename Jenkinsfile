@@ -20,11 +20,12 @@ pipeline {
     }
     post{
             success{
-                bat "start chrome /incognito http://PepitoPerez:MamaGu3bo@localhost:8080/job/Tareas%203%20de%20diciembre/job/DesplegarProduccion/build?token=963852"
-                bat "echo Tarea Iniciada correctamente"
+                bat "start opera http://PepitoPerez:MamaGu3bo@localhost:8080/job/Tareas%203%20de%20diciembre/job/DesplegarProduccion/build?token=963852"
+                bat "echo Tarea Desplegar en servidor de produccion Iniciada correctamente"
             }
             failure{
-                bat "start chrome /incognito http://PepitoPerez:MamaGu3bo@localhost:8080/job/Tareas%203%20de%20diciembre/job/Notificar/build?token=789456"
+                bat "start opera http://PepitoPerez:MamaGu3bo@localhost:8080/job/Tareas%203%20de%20diciembre/job/Notificar/build?token=789456"
+                bat "echo Tarea notificar al correo Iniciada correctamente"
             }
         }
 }
