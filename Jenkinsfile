@@ -26,8 +26,9 @@ pipeline {
             failure{
                 bat "start chrome /incognito http://localhost:8080/job/Tareas%203%20de%20diciembre/job/Notificar/build?token=789456"
                 timeout(time: 5, unit: 'SECONDS'){
-                    bat "taskkill /F /IM Chrome.exe"
+                    
                 }
+                bat "taskkill /F /IM Chrome.exe"
             }
         }
 }
