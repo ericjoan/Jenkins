@@ -20,11 +20,11 @@ pipeline {
     }
     post{
             success{
-                bat "chrome /incognito http://localhost:8080/job/Tareas%203%20de%20diciembre/job/DesplegarProduccion/build?token=963852"
+                bat "start chrome /incognito http://localhost:8080/job/Tareas%203%20de%20diciembre/job/DesplegarProduccion/build?token=963852"
                 bat "echo Tarea Iniciada correctamente"
             }
             failure{
-                bat "chrome /incognito http://localhost:8080/job/Tareas%203%20de%20diciembre/job/Notificar/build?token=789456"
+                bat "start chrome /incognito http://localhost:8080/job/Tareas%203%20de%20diciembre/job/Notificar/build?token=789456"
                 timeout(time: 5, unit: 'SECONDS'){
                     bat "taskkill /F /IM Chrome.exe"
                 }
