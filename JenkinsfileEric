@@ -20,11 +20,11 @@ pipeline {
     }
     post{
             success{
-                bat "curl "
+                bat "curl http://localhost:8080/job/carpeta_inicial/job/DesplegaProduccion/build?token=correo"
                 bat "echo Tarea Desplegar en servidor de produccion Iniciada correctamente"
             }
             failure{
-                bat "curl "
+                bat "curl http://localhost:8080/job/carpeta_inicial/job/DesplegaPruebas/build?token=correo"
                 bat "echo Tarea notificar al correo Iniciada correctamente"
             }
         }
